@@ -40,3 +40,12 @@ body{
   #games li::before {
     content: "";
   }
+
+  img {
+    max-width: 25vw;
+  }
+  
+  #game-details {
+    padding-bottom: 50px;
+  }
+  
