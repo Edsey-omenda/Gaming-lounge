@@ -32,3 +32,11 @@ body{
   .content {
     color: orange;
   }
+
+  #showing {
+    margin-left: 20px;
+  }
+  
+  #games li::before {
+    content: "";
+  }
