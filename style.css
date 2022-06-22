@@ -16,6 +16,7 @@ body{
     padding: 5px;
     color: orange;
     width: 20%;
+    margin-left: 800px;
   }
 
   #subtitle {
@@ -29,10 +30,20 @@ body{
     color: orange;
     padding: 0px 0px 5px 5px;
     width: 20.3%;
+    margin-left: 800px;
   }
 
-  .content {
+  .content{
     color: orange;
+  }
+
+  .g-content {
+    color: orange;
+     margin-left: 800px; 
+  }
+
+  #select-game, #comment-form{
+    margin-left: 800px
   }
 
   #showing {
@@ -46,9 +57,11 @@ body{
   img {
     width: 400px;
     height: 500px;
+    margin-left: 800px;
   }
   
   #game-details {
     padding-bottom: 50px;
+    margin-left: 10px;
   }
   
