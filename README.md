@@ -1,6 +1,6 @@
 Gaming Lounge ##By James Omenda
  ##Screenshot images
- ![]
+ ![](assets/Screenshot from 2022-06-24 17-24-10.png)
 
 ##Table of contents
  Description Features 
