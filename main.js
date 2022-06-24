@@ -31,12 +31,16 @@ function sayMyName() {
       games.map(game => {
         html+=`
         <li><h2>${game.title}<h2></li>
-        <li>${game.game_url}</li>
-        <li>${game.short_description}</li>
+        <li>${game.id}-game id</li>
+        <li>${game.game_url}-game link</li>
+        <li>${game.short_description}-about game</li>
         <li>${game.genre}-genre</li>
-        <li>${game.release_date}</li>
+        <li>${game.release_date}-release date</li>
         <li>${game.freetogame_profile_url}</li>
         <li>${game.thumbnail}</li>
+        <li>${game.platform}-play platform</li>
+        <li>${game.publisher}-publisher</li>
+        <li>${game.developer}-developer</li>
         `
       })
     document.getElementById("games").innerHTML = html
@@ -48,6 +52,7 @@ function sayMyName() {
         getAllGames()
     }
     initialize()
+
 
 
  
