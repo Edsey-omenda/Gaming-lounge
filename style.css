@@ -3,6 +3,7 @@
 body{
     font-family: 'Poppins', sans-serif;
     background-color: lightblue;
+  
 }
 
 .heading {
@@ -59,9 +60,16 @@ body{
     height: 500px;
     margin-left: 800px;
   }
+  #games{
+    color: black;
+  }
   
   #game-details {
     padding-bottom: 50px;
     margin-left: 10px;
+  }
+
+  .p-g-button, .comment-button, .s-g-button{
+    background-color: orange;
   }
   
