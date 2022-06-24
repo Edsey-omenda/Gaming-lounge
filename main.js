@@ -12,18 +12,42 @@ let spButton = document.getElementById("select-game")
 let comment = document.getElementById("comment") 
 let pButton = document.getElementById("comment-button") 
 
-let getGames = () =>{
-    fetch(url)
-    .then(response => console.log(response.json()))
-    .then(games =>{
-      games.map(game =>{
-         let ul = document.querySelector("#game-list")
-      })
-    })
- 
-    .catch(error =>console.log(error))
-}
 
-getGames();
+document.querySelector("#comment-button")
+addEventListener("click", sayMyName);
+
+function sayMyName() {
+    let entry = document.querySelector("#g-comment").value
+      let p = document.createElement("p");
+      p.textContent = `${entry}`
+    document.querySelector("#damjs").appendChild(p)
+  }
+// let getGames = () =>{
+    function getAllGames(){
+    fetch(url)
+    .then(response => response.json())
+    .then(games =>  {
+      let html = ''
+      games.map(game => {
+        html+=`
+        <li><h2>${game.title}<h2></li>
+        <li>${game.game_url}</li>
+        <li>${game.short_description}</li>
+        <li>${game.genre}-genre</li>
+        <li>${game.release_date}</li>
+        <li>${game.freetogame_profile_url}</li>
+        <li>${game.thumbnail}</li>
+        `
+      })
+    document.getElementById("games").innerHTML = html
+    })
+    }
+
+
+    function initialize(){
+        getAllGames()
+    }
+    initialize()
+
 
  
