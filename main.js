@@ -1,7 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
     //  getGames();
   });
-const url = "https://www.freetogame.com/api/games"
+
+
+const baseUrl = "https://www.freetogame.com/api/games";
+const proxyUrl = "https://cors-anywhere.herokuapp.com/";
+const apiUrl = `${proxyUrl}${baseUrl}`;
+
 let image = document.getElementById("cover")
 let title = document.querySelector("#title")
 let playtime = document.getElementById("playtime")
@@ -11,6 +16,7 @@ let level = document.getElementById("level")
 let spButton = document.getElementById("select-game") 
 let comment = document.getElementById("comment") 
 let pButton = document.getElementById("comment-button") 
+let gameData = [];
 
 
 document.querySelector("#comment-button")
@@ -23,10 +29,20 @@ function sayMyName() {
     document.querySelector("#damjs").appendChild(p)
   }
 // let getGames = () =>{
+// const getData = async () => {
+//   const res = await fetch(apiUrl);
+//   const games = await res.json();
+//   gameData = games;
+//   // console.log(gameData);
+
+// };
+
+// getData();
     function getAllGames(){
-    fetch(url)
+    fetch(apiUrl)
     .then(response => response.json())
     .then(games =>  {
+      // console.log(games)
       let html = ''
       games.map(game => {
         html+=`
