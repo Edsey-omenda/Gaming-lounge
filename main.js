@@ -3,9 +3,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
-const baseUrl = "https://www.freetogame.com/api/games";
-const proxyUrl = "https://cors-anywhere.herokuapp.com/";
-const apiUrl = `${proxyUrl}${baseUrl}`;
+const baseUrl = "https://nameless-anchorage-88298.herokuapp.com/games";
+// const proxyUrl = "https://cors-anywhere.herokuapp.com/";
+// const apiUrl = `${proxyUrl}${baseUrl}`;
 
 let image = document.getElementById("cover")
 let title = document.querySelector("#title")
@@ -39,7 +39,7 @@ function sayMyName() {
 
 // getData();
     function getAllGames(){
-    fetch(apiUrl)
+    fetch(baseUrl)
     .then(response => response.json())
     .then(games =>  {
       // console.log(games)
