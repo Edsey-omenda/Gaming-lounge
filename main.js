@@ -65,9 +65,10 @@ function sayMyName() {
 
 
     function initialize(){
-        getAllGames()
-    }
-    initialize()
+        getAllGames();
+    };
+
+    initialize();
 
 
 
